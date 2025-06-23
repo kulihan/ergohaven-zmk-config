@@ -1,11 +1,11 @@
 / {
   behaviors {
-    caps_or_down: behavior_mod_morph {
+    caps_or_down: caps_or_down {
       compatible = "zmk,behavior-mod-morph";
       bindings = <&kp DOWN>, <&kp CAPS_LOCK>;
       mods = <MOD_LSFT>;
     };
-    td_ctrl_alt_gui: behavior_tap_dance {
+    td_ctrl_alt_gui: td_ctrl_alt_gui {
       compatible = "zmk,behavior-tap-dance";
       bindings = <&kp LCTRL>, <&kp LALT>, <&kp LGUI>;
       tapping-term-ms = <250>;
