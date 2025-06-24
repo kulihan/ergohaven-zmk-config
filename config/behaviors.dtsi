@@ -1,7 +1,0 @@
-&behaviors {
-    caps_or_down: caps_or_down {
-        compatible = "zmk,behavior-mod-morph";
-        bindings = <&kp DOWN>, <&kp CAPS_LOCK>;
-        mods = <MOD_LSFT>;
-    };
-};
