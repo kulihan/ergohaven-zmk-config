@@ -26,7 +26,7 @@
         alt_gui: alt_gui {
             compatible = "zmk,behavior-tap-dance";
             bindings = <&kp LEFT_ALT>, <&trans>, <&kp LEFT_GUI>;
-
+            #binding-cells = <0>;
             tapping-term-ms = <250>;
             label = "ALT_GUI";
         };
@@ -34,7 +34,7 @@
         pg_down_prtSc: pg_down_prtSc {
             compatible = "zmk,behavior-tap-dance";
             bindings = <&kp PG_DN>, <&none>, <&kp PRINTSCREEN>;
-
+            #binding-cells = <0>;
             tapping-term-ms = <250>;
             label = "PG_DOWN_PRTSC";
         };
@@ -42,7 +42,7 @@
         ralt_rctrl: ralt_rctrl {
             compatible = "zmk,behavior-tap-dance";
             bindings = <&kp RIGHT_ALT>, <&kp RCTRL>;
-
+            #binding-cells = <0>;
             tapping-term-ms = <250>;
             label = "RALT_RCTRL";
         };
