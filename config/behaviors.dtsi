@@ -1,12 +1,8 @@
-/ {
-    behaviors {
-        caps_or_down: caps_or_down {
-            compatible = "zmk,behavior-mod-morph";
-            label = "caps_or_down";
-            bindings = <&kp DOWN>, <&kp CAPSLOCK>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
+&behaviors {
+    caps_or_down: caps_or_down {
+        compatible = "zmk,behavior-mod-morph";
+        label = "caps_or_down";
+        bindings = <&kp DOWN>, <&kp CAPSLOCK>;
+        mods = <(MOD_LSFT)>;
     };
 };
