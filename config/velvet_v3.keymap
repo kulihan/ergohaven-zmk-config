@@ -10,7 +10,7 @@
             compatible = "zmk,behavior-mod-morph";
             bindings = <&kp DOWN>, <&kp CAPSLOCK>;
 
-            mods = <MOD_LSFT>;
+            mods = <(MOD_LSFT)>;
         };
 
         td_ctrl_alt_gui: td_ctrl_alt_gui {
