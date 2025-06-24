@@ -9,7 +9,7 @@
         caps_or_down: caps_or_down {
             compatible = "zmk,behavior-mod-morph";
             bindings = <&kp DOWN>, <&kp CAPSLOCK>;
-            
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
             label = "CAPS_OR_DOWN";
@@ -18,18 +18,33 @@
         td_ctrl_alt_gui: td_ctrl_alt_gui {
             compatible = "zmk,behavior-tap-dance";
             bindings = <&kp LCTRL>, <&kp LALT>, <&kp LGUI>;
-            
+
             #binding-cells = <0>;
             tapping-term-ms = <250>;
         };
 
-        new_behavior: new_behavior {
-            compatible = "zmk,behavior-mod-morph";
-            label = "NEW_BEHAVIOR";
-            bindings = <&kp DOWN>, <&kp CAPS>;
+        alt_gui: alt_gui {
+            compatible = "zmk,behavior-tap-dance";
+            bindings = <&kp LEFT_ALT>, <&none>, <&kp LEFT_GUI>;
 
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            tapping-term-ms = <250>;
+            label = "ALT_GUI";
+        };
+
+        pg_down_prtSc: pg_down_prtSc {
+            compatible = "zmk,behavior-tap-dance";
+            bindings = <&kp PG_DN>, <&none>, <&kp PRINTSCREEN>;
+
+            tapping-term-ms = <250>;
+            label = "PG_DOWN_PRTSC";
+        };
+
+        ralt_rctrl: ralt_rctrl {
+            compatible = "zmk,behavior-tap-dance";
+            bindings = <&kp RIGHT_ALT>, <&kp RCTRL>;
+
+            tapping-term-ms = <250>;
+            label = "RALT_RCTRL";
         };
     };
 
@@ -38,10 +53,10 @@
 
         Base {
             bindings = <
-&kp ESC    &kp Q  &kp W      &kp E     &kp R      &kp T                        &kp Y  &kp U     &kp I      &kp O     &kp P     &kp BSPC
-&kp TAB    &kp A  &kp S      &kp D     &kp F      &kp G                        &kp H  &kp J     &kp K      &kp L     &kp SEMI  &kp BSLH
-&kp LSHFT  &kp Z  &kp X      &kp C     &kp V      &kp B                        &kp N  &kp M     &kp COMMA  &kp DOT   &kp SQT   &kp RSHFT
-                  &kp GRAVE  &kp LGUI  &kp LCTRL  &mo 1  &kp SPACE    &kp RET  &mo 2  &kp LALT  &kp LBKT   &kp RBKT
+&kp ESC    &kp Q  &kp W      &kp E     &kp R             &kp T                        &kp Y  &kp U        &kp I      &kp O     &kp P     &kp BSPC
+&kp TAB    &kp A  &kp S      &kp D     &kp F             &kp G                        &kp H  &kp J        &kp K      &kp L     &kp SEMI  &kp BSLH
+&kp LSHFT  &kp Z  &kp X      &kp C     &kp V             &kp B                        &kp N  &kp M        &kp COMMA  &kp DOT   &kp SQT   &kp RSHFT
+                  &kp GRAVE  &alt_gui  &td_ctrl_alt_gui  &mo 1  &kp SPACE    &kp RET  &mo 2  &ralt_rctrl  &kp LBKT   &kp RBKT
             >;
 
             display-name = "Base";
@@ -49,10 +64,10 @@
 
         Navigation {
             bindings = <
-&kp TILDE  &kp N1  &kp N2    &kp N3         &kp N4     &kp N5                     &kp N6    &kp N7        &kp N8         &kp N9       &kp N0         &trans
-&trans     &trans  &kp HOME  &kp UP         &kp END    &kp INS                    &trans    &kp LEFT      &kp DOWN       &kp UP       &kp RIGHT      &trans
-&trans     &trans  &kp LEFT  &caps_or_down  &kp RIGHT  &kp DEL                    &kp CLCK  &kp LC(LEFT)  &kp PAGE_DOWN  &kp PAGE_UP  &kp LC(RIGHT)  &trans
-                   &trans    &trans         &trans     &trans   &trans    &trans  &mo 3     &trans        &trans         &trans
+&kp TILDE  &kp N1  &kp N2    &kp N3         &kp N4     &kp N5                     &kp N6          &kp N7        &kp N8         &kp N9       &kp N0         &trans
+&trans     &trans  &kp HOME  &kp UP         &kp END    &kp INS                    &kp PG_UP       &kp LEFT      &kp DOWN       &kp UP       &kp RIGHT      &trans
+&trans     &trans  &kp LEFT  &caps_or_down  &kp RIGHT  &kp DEL                    &pg_down_prtSc  &kp LC(LEFT)  &kp PAGE_DOWN  &kp PAGE_UP  &kp LC(RIGHT)  &trans
+                   &trans    &trans         &trans     &trans   &trans    &trans  &mo 3           &trans        &trans         &trans
             >;
 
             display-name = "Navigation";
