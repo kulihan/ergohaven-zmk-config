@@ -26,6 +26,7 @@
         alt_gui: alt_gui {
             compatible = "zmk,behavior-tap-dance";
             bindings = <&kp LEFT_ALT>, <&trans>, <&kp LEFT_GUI>;
+
             #binding-cells = <0>;
             tapping-term-ms = <250>;
             label = "ALT_GUI";
@@ -34,6 +35,7 @@
         pg_down_prtSc: pg_down_prtSc {
             compatible = "zmk,behavior-tap-dance";
             bindings = <&kp PG_DN>, <&none>, <&kp PRINTSCREEN>;
+
             #binding-cells = <0>;
             tapping-term-ms = <250>;
             label = "PG_DOWN_PRTSC";
@@ -42,6 +44,7 @@
         ralt_rctrl: ralt_rctrl {
             compatible = "zmk,behavior-tap-dance";
             bindings = <&kp RIGHT_ALT>, <&kp RCTRL>;
+
             #binding-cells = <0>;
             tapping-term-ms = <250>;
             label = "RALT_RCTRL";
@@ -64,10 +67,10 @@
 
         Navigation {
             bindings = <
-&kp TILDE  &kp N1  &kp N2    &kp N3         &kp N4     &kp N5                     &kp N6          &kp N7        &kp N8         &kp N9       &kp N0         &trans
-&trans     &trans  &kp HOME  &kp UP         &kp END    &kp INS                    &kp PG_UP       &kp LEFT      &kp DOWN       &kp UP       &kp RIGHT      &trans
-&trans     &trans  &kp LEFT  &caps_or_down  &kp RIGHT  &kp DEL                    &pg_down_prtSc  &kp LC(LEFT)  &kp PAGE_DOWN  &kp PAGE_UP  &kp LC(RIGHT)  &trans
-                   &trans    &trans         &trans     &trans   &trans    &trans  &mo 3           &trans        &trans         &trans
+&kp TILDE  &kp N1  &kp N2    &kp N3         &kp N4     &kp N5                     &kp N6         &kp N7               &kp N8         &kp N9       &kp N0         &trans
+&trans     &trans  &kp HOME  &kp UP         &kp END    &kp INS                    &kp PG_UP      &kp LEFT             &kp DOWN       &kp UP       &kp RIGHT      &trans
+&trans     &trans  &kp LEFT  &caps_or_down  &kp RIGHT  &kp DEL                    &kp PAGE_DOWN  &kp LC(PRINTSCREEN)  &kp PAGE_DOWN  &kp PAGE_UP  &kp LC(RIGHT)  &trans
+                   &trans    &trans         &trans     &trans   &trans    &trans  &mo 3          &trans               &trans         &trans
             >;
 
             display-name = "Navigation";
