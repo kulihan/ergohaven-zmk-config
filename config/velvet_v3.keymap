@@ -11,6 +11,7 @@
             bindings = <&kp DOWN>, <&kp CAPSLOCK>;
 
             mods = <(MOD_LSFT)>;
+            label = "CAPS_OR_DOWN";
         };
 
         td_ctrl_alt_gui: td_ctrl_alt_gui {
