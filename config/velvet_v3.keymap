@@ -9,7 +9,8 @@
         caps_or_down: caps_or_down {
             compatible = "zmk,behavior-mod-morph";
             bindings = <&kp DOWN>, <&kp CAPSLOCK>;
-
+            
+            #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
             label = "CAPS_OR_DOWN";
         };
@@ -17,7 +18,8 @@
         td_ctrl_alt_gui: td_ctrl_alt_gui {
             compatible = "zmk,behavior-tap-dance";
             bindings = <&kp LCTRL>, <&kp LALT>, <&kp LGUI>;
-
+            
+            #binding-cells = <0>;
             tapping-term-ms = <250>;
         };
 
